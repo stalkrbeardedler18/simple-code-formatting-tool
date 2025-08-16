@@ -7,7 +7,7 @@ def format_code(code: str, language: str) -> str:
     # Here you would implement actual formatting logic based on the language
     return code.strip()  # Example: just strip whitespace
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description='Simple Code Formatting Tool')
     parser.add_argument('file', type=str, help='The code file to format')
     parser.add_argument('--language', type=str, required=True, help='The programming language of the code')
