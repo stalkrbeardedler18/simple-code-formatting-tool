@@ -7,7 +7,6 @@ def format_code(code: str, language: str) -> str:
     # Here you would implement actual formatting logic based on the language
     return code.strip()  # Example: just strip whitespace
 
-
 def main():
     parser = argparse.ArgumentParser(description='Simple Code Formatting Tool')
     parser.add_argument('file', type=str, help='The code file to format')
@@ -23,6 +22,8 @@ def main():
 
         print(formatted_code)
 
+    except FileNotFoundError:
+        print(f'Error: File not found - {args.file}')
     except Exception as e:
         print(f'Error: {e}')
 
